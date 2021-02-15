@@ -3,7 +3,8 @@
     <div class="col-12">
 
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="What are you looking for? "
+        <input type="text" [(ngModel)]="phrase"
+         class="form-control" placeholder="What are you looking for? "
         aria-label="search" >
         <div class="input-group-append">
           <span class="input-group-text" id="basic-addon2">
@@ -22,7 +23,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr  *ngFor="let hero of heroList">
+          <tr  *ngFor="let hero of heroList |filter:phrase">
             <th scope="row">{{hero.id}}</th>
             <td>{{hero.name}}</td>
             <td>{{hero.superPower}}</td>

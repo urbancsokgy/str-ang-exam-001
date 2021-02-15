@@ -10,6 +10,7 @@ import { Hero } from 'src/app/common/hero';
 export class HeroesComponent implements OnInit {
 
   heroList: Hero[]=[];
+  phrase: string='';
 
   constructor(private heroService: HeroService) { }
 
